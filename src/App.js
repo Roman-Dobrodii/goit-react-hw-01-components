@@ -8,9 +8,11 @@ import statisticalData from './data-base/statistical-data.json';
 import friends from './data-base/friends.json';
 import transactions from './data-base/transactions.json';
 
+import './App.css';
+
 export default function App() {
   return (
-    <div className="container">
+    <>
       <Profile
         avatar={user.avatar}
         name={user.name}
@@ -21,6 +23,6 @@ export default function App() {
       <Statistics title="Upload stats" stats={statisticalData} />
       <FriendList friends={friends} />
       <TransactionHistory items={transactions} />
-    </div>
+    </>
   );
 }
